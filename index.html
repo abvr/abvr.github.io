@@ -106,18 +106,18 @@
 
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
 
-    <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
+    <tr onmouseout="MPPT_stop()" onmouseover="MPPT_start()" >
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'aperture_image'><img src='aperture_after.jpg'></div>
-        <img src='aperture_before.jpg'>
+        <div class="two" id = 'MPPT_image'><img src='MPPT_after.jpg'></div>
+        <img src='MPPT_before.jpg'>
         </div>
         <script type="text/javascript">
-        function aperture_start() {
-        document.getElementById('aperture_image').style.opacity = "1";
+        function MPPT_start() {
+        document.getElementById('MPPT_image').style.opacity = "1";
         }
-        function aperture_stop() {
-        document.getElementById('aperture_image').style.opacity = "0";
+        function MPPT_stop() {
+        document.getElementById('MPPT_image').style.opacity = "0";
         }
         aperture_stop()
         </script>
@@ -138,20 +138,20 @@
       </td>
     </tr>
 
-    <tr onmouseout="deepburst_stop()" onmouseover="deepburst_start()" >
+    <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
       <td width="25%">
         <div class="one">
-        <div class="two" id = 'deepburst_image'><img src='deepburst_after.png'></div>
-        <img src='deepburst_before.png'>
+        <div class="two" id = 'aperture_image'><img src='aperture_after.jpg'></div>
+        <img src='aperture_before.jpg'>
         </div>
         <script type="text/javascript">
-        function deepburst_start() {
-        document.getElementById('deepburst_image').style.opacity = "1";
+        function aperture_start() {
+        document.getElementById('aperture_imag').style.opacity = "1";
         }
-        function deepburst_stop() {
-        document.getElementById('deepburst_image').style.opacity = "0";
+        function aperture_stop() {
+        document.getElementById('aperture_image').style.opacity = "0";
         }
-        deepburst_stop()
+        aperture_stop()
         </script>
       </td>
       <td valign="top" width="75%">
