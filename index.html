@@ -300,7 +300,7 @@ and drip system.<br>Created an automated system for effortless horticulture usin
       <table width="100%" align="center" border="0" cellpadding="20">
       <tr>
 	      
-        <td width="25%"><img src="map.png" alt="" width="160" height="160"></td>
+        <td width="25%"><img src="map.gif" alt="" width="160" height="160"></td>
         <td width="75%" valign="center">
           <p>
             <ul style="list-style-type:disc">
@@ -320,6 +320,21 @@ and drip system.<br>Created an automated system for effortless horticulture usin
   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
       <tr>
         <td>
+	 <tr onmouseout="D_stop()" onmouseover="D_start()" >
+      <td width="25%">
+        <div class="one">
+        <div class="two" id = 'D_image'><img src='D_after.gif'></div>
+        <img src='D_before.gif'>
+        </div>
+        <script type="text/javascript">
+        function D_start() {
+        document.getElementById('D_image').style.opacity = "1";
+        }
+        function D_stop() {
+        document.getElementById('D_image').style.opacity = "0";
+        }
+        D_stop()
+        </script>
         <heading>Other interests</heading>
         </td>
       </tr>
