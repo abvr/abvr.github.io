@@ -1,16 +1,1 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1561.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
-</head>
-<body>
-<p class="p1">Abhinav Rajagopal is a research scientist at Rekindle Automation, working on machine learning and computational biology for tackling sustainability and healthcare through the application of embedded systems. He received a Bachelors in Electrical engineering from the SVCE, Anna University in 2017, where he was advised by one of his professors to pursue his obsessions. His research interests include machine learning, CV, Hidden markov models, cryptography, systems software, automata, biological image analysis, and general relativity.<span class="Apple-converted-space"> </span></p>
-</body>
-</html>
+Abhinav Rajagopal is a research scientist at Rekindle Automation, working on machine learning and computational biology for tackling sustainability and healthcare through the application of embedded systems. He received a Bachelors in Electrical engineering from the SVCE, Anna University in 2017, where he was advised by one of his professors to pursue his obsessions. His research interests include machine learning, CV, Hidden markov models, cryptography, systems software, automata, biological image analysis, and general relativity.
