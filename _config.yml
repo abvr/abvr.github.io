@@ -1,7 +1,2 @@
 theme: jekyll-theme-midnight
-pages:
-script:
-- my_commands
-artifacts:
-paths:
-- /Users/abhinavrajagopalan/abhinavrajagopalan.gitlab.io
+
