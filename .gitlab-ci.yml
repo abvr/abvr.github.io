@@ -1,6 +1,11 @@
 pages:
-script:
-- my_commands
-artifacts:
-paths:
-- /Users/abhinavrajagopalan/abhinavrajagopalan.gitlab.io
+  stage: deploy
+  script:
+  - mkdir .public
+  - cp -r * .public
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
