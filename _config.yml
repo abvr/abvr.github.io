@@ -8,7 +8,7 @@
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
 # Site settings
-title: Abhi's homepage
+title: Core dump
 email: abhinavrajagopalan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     This is the blog and personal web page of Abhinav Rajagopalan mostly about random musings, science and computing.
