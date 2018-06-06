@@ -1,0 +1,70 @@
+---
+layout: post
+title: Bharatiya Jumla Party?
+---
+
+When I think of the BJP, I think of Modi. Rather just like how they’re known throughout the country and the world.
+This is probably the biggest fallacy of the whole country. The presence of the authoritarian leader and his swinging ways of swaying the masses.
+They’ve successfully deluded people over the decades into the ‘Hindutva’ belief. Whereas ‘Hindutva’ had nothing to do with Hindu-ism and it’s beliefs in the first place.
+Rather it’s like a version of Nazi Germany where the Führer was able to mobilize a certain part of the populace through the identity of ethnicity and religion.
+Here it’s religion playing it’s cards.
+There’s a reason Savarkar and several others at the later stages of British India, formed the Hindu Mahasabha and other such children organizations, directly inspired by Nazism. 
+Modi has his exceptional talents agreed, the scheming Machiavellian traits needed for politics coupled with the oratory skills which will trump even Mark Anthony, but most of the campaigns are skilled rhetoric and demagoguery.
+Agreed. None of the parties in India have their underlying traits tended to identification based on something other than their caste, creed and ethnicity.
+
+
+ ![image](https://cdn-images-1.medium.com/max/1600/1*KGNORweEfT9qJLJW9eRzmA.jpeg)
+*Credit: Narendra Modi/Facebook*
+
+Gullible people are too naive to overlook such things and either that or the lack of choices forces them to repeat the same fallacies over and over again.
+They’ve also deluded the masses into believing in them as bandwagons of their faith and the people look upto the party as the biggest representative and upholders of their faith.
+Which is all only a farce.
+Briefly I believe, but soon as the ’14 victory arrived their only motive was to establish their regime over the country and occupy all states under their rule.
+The motive of ‘vikaas’ was digressed and continues to do so as the country moves away from such goals to the underlying ulterior motives if the party
+A fair share of the populace according to surveys have the same plight as to that of having no choice.
+Then there’s AAP. Exact reverse of the BJP, having a novel and nobel ideal but unable to act upon it with conviction due to various forces at play. For now they’re the only seemingly sensible choice even though they’ve their share of problems, for the people who do have a choice.
+The current government have now established their regime over fifty percent of the states and have no plans to stop either. They’re after the One man to rule them all strategy here.
+During the 2014 Lok Sabha elections, Modiji was the face of the campaign. People were told that a vote for BJP was a vote for Modiji. And they voted for Modiji in large numbers. It seems unfair that after having voted for a tall leader like Modiji, they get some local figure as their MP. Very unfair. Instead, the law should amended to allow Modiji to represent more than one constituency, so that every constituency can have the best man to represent it in Parliament. It is entirely possible that all 545 constituencies will elect Modiji as their MP, in which case we will have a smoothly functioning parliament. — Nitin Pai
+Ever since ’14 we’ve been seeing a radical shift in political system where the largest democracy has seen an aberration. A strong authoritarian leader is what was lacking in the country for decades and the man does not fail to impress the general populace with his extemporaneous gala of speeches one after the other for the past three and half years or so. The right place at the right time seems to work exceptionally well for the BJP as one portion of the upheaval of UPA-2 saw the rise of the infamous ‘Bhakts’ ranging from NRIs to the average village resident and another portion of the populace saw a new and fresh hope for the country in Modi due to his demeanor and personality.
+And like the millions who did see that great hope for their country, I too was one.
+All of that imagery and grandiose in the past, has in the recent times only led to increased demagoguery and implementation of theoretically good policies in a half baked and ill strategized manner due to sheer recklessness or a quest for proving oneself as a man of action.
+
+>>“War is peace.
+>>Freedom is slavery.
+>>Ignorance is strength.”
+>>  ― George Orwell, 1984
+
+More recently, 2017 saw the crucial UP elections where the Prime Minster elected what was then known to the citizens as a man of faith or a religious Guru calling himself Yogi who has several cases pending against him which were easily repressed due to the power of the ruling government. Another regressive period of events were the ridiculous measures taken on the choices of food.
+Hate crimes. Implying, the cow, being a holy entity in Hinduism needs to be protected from being eaten by people of other faiths who do consume it. Protection of one’s cows may be alright, but going after all the cows and slaying people in the name of their faith seems merely capriciously foolhardy. In a country like India where it’s only right to let people their freedom of the choice of food due to severe lack of it, restricting even the basic requirement of sustenance is only plain evil.
+Following which several measures taken by the BJP continued to awe citizens right from the demonetization to the strangulation of citizens with the infamous Aadhar card. Phenomenal policies such as demonetization and GST could have well been done with enough consultation and systematic implementation from competent policy makers by the government. Sure, the surprise dusk deployment could have still been kept even, with proper execution.
+
+Yes, the long term impacts of the policies of the current government is probably or shall we say hopefully an advantageous one for the economy. But immediate impact and rather childlike excuses for the half baked implementation such as Digital India was laughable followed by the ridiculous GST policy which saw and continues to see constant rollbacks and modifications to our due to flak from all sides. They also seem to have a knack for impunity.
+Too early to judge them? Maybe. But to perceive?
+
+All my thoughts have been only due to the result of continuous unbiased perception.
+
+Moving on to some of measures which can have a consensus, several ‘schemes’ have been proposed and established for the amelioration of the penurious populace and only they know of it’s outcomes, if any. One of the institutes known as National Institution for Transforming India or NITI Aayog have been set up in order to function as a think tank for the government with the aim to achieve several goals such as Sustainable Development Goals and to enhance cooperative federalism by fostering involvement of State Governments of India in the economic policy-making process using a bottom-up approach. Its initiatives include “15 year road map”, “7-year vision, strategy and action plan”, AMRUT, Digital India, Atal Innovation Mission, Medical Education Reform, Agriculture reforms (Model Land Leasing Law, Reforms of the Agricultural Produce Marketing Committee Act, Agricultural Marketing and Farmer Friendly Reforms Index for ranking states), Indices Measuring States’ Performance in Health, Education and Water Management, Sub-Group of Chief Ministers on Rationalization of Centrally Sponsored Schemes, Sub-Group of Chief Ministers on Swachh Bharat Abhiyan, Sub-Group of Chief Ministers on Skill Development, Task Forces on Agriculture and Elimination of Poverty, and Transforming India Lecture Series. Several such promises and one too many targets to attain may or may not all be achievable in the current term as suggested. How far the measures can be achieved stands to the test of relentless pursuit and drive of the system.
+
+Then there are the things like the bullet train project, with a soft loan from Japan, start to seem more like gimmicks rather than imperative policies. Improving the public transport system for instance would’ve been a more welcoming move.
+As the richest political party in the country they have surely attained control and territory through the years.
+Criticism. Handling it has been a major test for the party as a whole as several incidents have only gone to show that they have a weakness for even light hearted criticisms. Maybe they’ll get accustomed to it over the years like their opposition Congress party has grown so immune to even astronomical figures of corruption.
+The same problem lies with the people too. Growing accustomed for instance, to the outright breach of several judicial rules to obtain a favourable outcome on their behalf and several such breaches of conduct has only seen the ruling party continuing to exploit the system and the people either left helpless or plain apathetic.
+In conclusion, the current government can only bank on their supreme leader for so long as to impress the deluded citizens and need to focus on more thorough and constant scrutiny of their policies without resorting to sycophancy from their ministers trying their level best to impress their prime minister. Forcible measures causing distress and outrage have to be further scrutinized and curbed by the Supreme court and stand up for their citizens instead of being a pushover to the BJP’s demands. Being independent of the legislation, they simply have to have their right to autonomy and not be influenced by lobbying or such undemocratic ploys from any political party.
+The incumbent party has to re-evaluate itself on it’s goals and ideologies and either outright be frank with their motives or quit serving before any more trouble erupts. By being true to the people can they have a longer tenure or outright being driven by propaganda and communalism can only go so far as to a massive regression in state of affairs in independent India.
+
+Not only does the incumbent government has its fair share of lackadaisical ministers unable to govern states and come up with healthy policies, it also has seen an up rise of scheming corruption by its members. Most of which are smartly controlled or repressed by the media which has turned out to be a joke and mere mouthpieces of propaganda. With best total control of social media through its proactive IT cell the government acts highly prudent with its sharing of information with the citizens and pruning of any such deviants.
+
+The Modi government either had too much ambition on establishing their ideology among the masses or had one too many policies promised in their manifesto. With the try too hard campaigns which rather seemed desperate in Gujarat recently, the only thing which was obvious was that they would have no issue winning the race and yet they seemed a little lacking in confidence. Which rather due to fatigue or not only they know, but the things which went wrong were the major parties’ fight over petty issues to win the upper hand by resorting to utter whataboutism propaganda.
+Whataboutism was nothing foreign to the BJP as it was their primary technique used in all campaigns since decades long and their demagoguery had such propaganda inbuilt with their farcical ideology.
+
+The recent mobilization of nationalized banks due to the lack of available funds only continues to wrought the existing revenue from the tax share of the billion or so people. The failure of the billionaires of the country to pay back humongous loans had forced the finance ministry to undertake such dramatic measures.
+Soon people or rather the Supreme court may say Modiji is the best person to make laws, to implement the laws, to judge when those laws are broken. We should stop listening to the Aam Aadmi who want to perpetuate corruption, cronyism and regression in the name of the constitution.
+Jokes apart, arguably the only worthy and successful measure that was produced by the Supreme Court in the recent years was the establishment of the right to privacy at the time of outrage to the clusterfuck implementation of Aadhar without any care for secure infrastructure. Proper regulation, privacy and security of the sensitive data of a billion people is key to prevent such a thing from turning into an Orwellian nightmare.
+The government should therefore take care of such gross incompetency before going on the spree of authoritarianism and just bombastic words. It’s high time regressive things like religion, caste and such polarization need to be put behind as past evils and equality and secularism encouraged and not frowned upon.
+After all, megalomania, despotism, bigotry and such can only get you so far in a country like India. It’s just not sustainable for the masses. From the looks of it, the right wing is here to stay and if so they need to re-evaluate and self reflect on themselves to do the right things.
+Sure, they may have the right intentions with the wrong ideologies which seems too outdated and regressive compared to their goal of ‘vikaas’. Such a contradictory or ironical psyche can be reflected upon and mended if only they would employ rational thinking rather than rationalization at all times.
+By which time, they shall be gone or get their heart in the right place.
+Hopefully, either one.
+
+[^1]: The opinions expressed are clearly my own and any constructive criticism based on facts are welcome as only what was heard, read and witnessed over the last few years has been written.
+
