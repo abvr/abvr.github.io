@@ -3,9 +3,36 @@
 ---
 @charset "utf-8";
 
+<style>
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunsx.otf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunsi.otf');
+    font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Computer Modern";
+    src: url('http://spratt.github.io/Computer-Modern/cmunbxo.otf');
+    font-weight: bold;
+    font-style: italic, oblique;
+  }
+
+  body {
+    font-family: "Computer Modern", serif;
+  }
+</style>
+
 // Our variables
 //$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
-$font-family-display: Computer Modern;
+$font-family-display: cmu;
 $base-font-size:   20px;
 $base-font-weight: 200;
 $small-font-size:  $base-font-size * 0.875;
@@ -46,32 +73,7 @@ $on-laptop:        900px;
     }
 }
 
-<style>
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsx.otf');
-    font-weight: bold;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsi.otf');
-    font-style: italic, oblique;
-  }
-  @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunbxo.otf');
-    font-weight: bold;
-    font-style: italic, oblique;
-  }
-
-  body {
-    font-family: "Computer Modern", serif;
-  }
-</style>
+x
 
 
 
