@@ -11,7 +11,7 @@ exclude: [vendor, "Gemfile", "Gemfile.lock"]
 title: Core dump
 email: abhinavrajagopalan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    This is the blog and personal web page of Abhinav Rajagopalan mostly about random musings, science and computing.
+    This is my blog and personal web page where I write mostly about random musings, science and computing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://abhinavrajagopalan.gitlab.io" # the base hostname & protocol for your site
 gitlab_username: abhinavrajagopalan
