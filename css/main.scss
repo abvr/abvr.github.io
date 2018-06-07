@@ -31,6 +31,20 @@ $content-width:    900px;
 $on-palm:          600px;
 $on-laptop:        900px;
 
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
 <style>
   @font-face {
     font-family: "Computer Modern";
@@ -57,20 +71,6 @@ $on-laptop:        900px;
     font-family: "Computer Modern", serif;
   }
 </style>
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
