@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
     This is my blog and personal web page where I write mostly about random musings, science and computing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abhinavrajagopal.github.io" # the base hostname & protocol for your site
-gitlab_username: abhinavrajagopalan
+gitlab_username: abhinavrajagopal
 
 # Build settings
 markdown: kramdown
