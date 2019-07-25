@@ -1,26 +1,26 @@
 <style>
   @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
+    font-family: "Zilla Slab";
+    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Regular.ufo');
   }
   @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsx.otf');
+    font-family: "Zilla Slab";
+    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Bold.ufo');
     font-weight: bold;
   }
   @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunsi.otf');
+    font-family: "Zilla Slab";
+    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Italic.ufo');
     font-style: italic, oblique;
   }
   @font-face {
-    font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunbxo.otf');
+    font-family: "Zilla Slab";
+    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Bold.ufo');
     font-weight: bold;
     font-style: italic, oblique;
   }
 
   body {
-    font-family: "Computer Modern", serif;
+    font-family: "Zilla Slab", serif;
   }
 </style>
