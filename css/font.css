@@ -1,26 +1,26 @@
 <style>
   @font-face {
-    font-family: "Zilla Slab";
-    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Regular.ufo');
+    font-family: "Adobe Caslon";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-Regular.otf');
   }
   @font-face {
-    font-family: "Zilla Slab";
-    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Bold.ufo');
+    font-family: "Adobe Caslon";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-Bold.otf');
     font-weight: bold;
   }
   @font-face {
-    font-family: "Zilla Slab";
-    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Italic.ufo');
+    font-family: "Adobe Caslon";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-Italic.otf');
     font-style: italic, oblique;
   }
   @font-face {
-    font-family: "Zilla Slab";
-    src: url('https://github.com/mozilla/zilla-slab/tree/master/sources/ZillaSlab-Bold.ufo');
+    font-family: "Adobe Caslon";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-BoldItalic.otf');
     font-weight: bold;
     font-style: italic, oblique;
   }
 
   body {
-    font-family: "Zilla Slab", serif;
+    font-family: "Adobe Caslon", serif;
   }
 </style>
