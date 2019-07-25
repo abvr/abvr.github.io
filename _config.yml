@@ -8,7 +8,7 @@
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
 # Site settings
-title: Anomalous matter 
+title: Stream of Soliloquies 
 email: abhinavrajagopalan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     This is my blog and personal web page where I write mostly about computing, science, philosophy and whatever else I feel like. 
