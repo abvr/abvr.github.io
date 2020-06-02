@@ -8,7 +8,7 @@ comments: true
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
       
-    {% if page.comments %}
+    {% page.comments %}
       <div id="disqus_thread"></div>
 <script>
 
@@ -18,7 +18,7 @@ comments: true
 
 var disqus_config = function () {
 this.page.url = https://abhinavrajagopalan.in;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+this.page.identifier = /2020/05/15/wtf.html ; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
