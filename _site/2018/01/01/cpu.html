@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Intel vs Kernel</title>
+  <meta name="description" content="Kernel memory is mapped to user mode processes to allow syscalls (a request to access hardware/kernel services) to execute without having to switching to ano...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://abvr.github.io/2018/01/01/cpu.html">
+  <link rel="alternate" type="application/rss+xml" title="Stream of Soliloquy" href="https://abvr.github.io/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Stream of Soliloquy</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about.html">About</a>
+          
+        
+          
+          <a class="page-link" href="/archive/">Archive</a>
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Intel vs Kernel</h1>
+    <p class="post-meta"><time datetime="2018-01-01T00:00:00+05:30" itemprop="datePublished">Jan 1, 2018</time>
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Kernel memory is mapped to user mode processes to allow syscalls (a request to access hardware/kernel services) to execute without having to switching to another virtual address space. Each process runs in its own virtual address space, and it’s quite expensive to switch between them, as it involves flushing the CPU’s Translation Lookaside Buffer, (used for quickly finding the physical location of virtual memory addresses) and a few other things.
+Now the vulnerability here is that, when kernel mode is active it also seems that the user space is able to access the memory addresses of the kernel process. Which is horrendously bad for security.</p>
+
+<p>The fix is to separate the kernel’s memory completely from user processes using what’s called Kernel Page Table Isolation, or KPTI. The trade-off to the separation caused by the KPTI/KASLR patch is that it is relatively expensive, time wise, to keep switching between two separate address spaces for every system call and for every interrupt from the hardware. These context switches do not happen instantly, and they force the processor to dump cached data and reload information from memory. This increases the kernel’s overhead, and slows down the computer. That’s what I make of it from understanding of it.
+So different tasks will suffer to different extents. If the process does much of the work itself, without requiring much from the kernel, then it wont suffer a performance hit. But if it uses lots of syscalls, and do lots of uncached memory operations, then it’s going to take a much larger hit.
+The flaw could be abused by programs and logged-in users to read the contents of the kernel’s memory. The kernel’s memory space is hidden from user processes and programs because it may contain all sorts of secrets, such as passwords, login keys, files cached from disk, and other sensitive data. Well, that’s as bad as it gets.</p>
+
+<p>Fixing information leaks in the hardware is difficult and, in any case, deployed systems are likely to remain vulnerable. But there is a viable defense against these information leaks: making the kernel’s page tables entirely inaccessible to user space or provide secure verification of address spaces. In other words, it would seem that the practice of mapping the kernel into user space needs to end in the interest of hardening the system.
+The issue comprises two such variants : Spectre and Meltdown, where CPU data cache timing can be abused to efficiently leak information out of mis-speculated execution, leading to arbitrary virtual memory read vulnerabilities across local security boundaries in various contexts.
+If you randomize the placing of the kernel’s code in memory, exploits can’t find the internal gadgets they need to fully compromise a system. This processor flaw could be potentially exploited to figure out where in memory the kernel has positioned its data and code, hence the squall of software patching.
+AMD processors are not subject to the types of attacks that the kernel page table isolation feature protects against. The AMD microarchitecture does not allow memory references, including speculative references, that access higher privileged data when running in a lesser privileged mode when that access would result in a page fault.</p>
+
+<p>Well, not really. It’s not just Intel here, several others such as AMD, ARM etc and hence a significant portion of cloud infrastructure are affected.</p>
+
+<div style="text-align:center"><img src="https://3.bp.blogspot.com/-O6-JHlkvq5U/Wk064bpm2qI/AAAAAAAACPk/rjpYr72vyF0jYASgT-w4NBFQXC3hgIZZwCEwYBhgL/s1600/image2.png" /></div>
+<p><em>Project Zero</em></p>
+
+<p>Intel’s perform speculative execution. In order to keep their internal pipelines primed with instructions to obey, the CPU cores try their best to guess what code is going to be run next, fetch it, and execute it. And they aren’t even verified beforehand. The branch predictor stores a truncated absolute destination address.</p>
+
+<p>It appears, that Intel’s CPUs speculatively execute code potentially without performing any security checks. It seems it may be possible to craft the instructions in such a way that the processor starts executing an instruction that would normally be blocked — such as reading kernel memory from user mode — and completes that instruction before the privilege level check occurs. Which means that the user level space can read kernel level data. The memory management unit of all the operating systems involved sure needs serious evaluation and testing before deployment of fixes.</p>
+
+<p>If speculative execution can somehow be managed and the memory address space be verified before being assigned to the kernel space that would be a good way to go about it.</p>
+
+<p>Putting an end to speculative execution seems necessary and is better applied to use of the wasted cycles in more significant processes.</p>
+
+<p>Effective management of caches are also needed as there’re a couple of micro architectural attacks on kernel address information associated with caches which are :</p>
+
+<p>Address Translation Caches and Branch-Target Buffer are explained briefly below.</p>
+
+<p>Address Translation Caches. Hund et al. [7] described a double page fault attack, where an unprivileged attacker tries to access an inaccessible kernel memory location, triggering a page fault. After the page fault interrupt is handled by the operating system, the control is handed back to an error handler in the user program. The attacker measures the execution time of the page fault interrupt. If the memory location is valid, regardless of whether it is accessible or not, address translation table entries are copied into the corresponding address translation caches. The attacker then tries to access the same inaccessible memory location again. If the memory location is valid, the address translation is already cached and the page fault interrupt will take less time. Thus, the attacker learns whether a memory location is valid or not, even if it is not accessible from the user space.</p>
+
+<p>Branch-Target Buffer. Evtyushkin et al. [3] presented an attack on the branch- target buffer (BTB) to recover the lowest 30 bits of a randomized kernel address. The BTB is indexed based on the lowest 30 bits of the virtual address. Similar as in a regular cache attack, the adversary occupies parts of the BTB by executing a sequence of branch instructions. If the kernel uses virtual addresses with the same value for the lowest 30 bits as the attacker, the sequence of branch instructions requires more time. Through targeted execution of system calls, the adversary can obtain information about virtual addresses of code that is executed during a system call. Consequently, the BTB attack defeats KASLR.</p>
+
+<p>Coming to ASLR, it attempts to introduce as many random bits as possible into the address ranges for commonly mapped objects. Even if ASLR and DEP involves randomly offsetting memory structures and module base addresses to make guessing the location of ROP gadgets and APIs very difficult, there are vulnerabilities with pointer leaks and such where a value on the stack might be used to locate a usable function pointer or ROP gadget and once done it’s possible to create a payload which bypasses ASLR.
+Then there’s the randomization process which was mentioned before.</p>
+
+<p>Intel’s RDRAND has been used to return randomised bits as an on-chip entropy source. However, there is some evidence that this Random number generator has backdoors which might have been enforced by the NSA to help them break encrypted communications — So RDRAND may not be truly random. Therefore it’s better to employ the use of other such generators in conjunction or XOR it with other sources to mitigate any such risks. A low overhead fix has to be developed.</p>
+
+<p>KAISER, which proposes some measures to tackle the problem of ASLR, implements two set of page tables for each process unlike most systems. It enforces a strict kernel and user space isolation such that the hardware does not hold any information about kernel addresses while running user processes with low overhead. It uses the Shadow Address space to provide Kernel address isolation and by minimising the kernel address space mapping which had more locations to be mapped on both address spaces.</p>
+
+<p>But it was interestingly found that the very idea of modern kernels is based upon the capability of accessing user space addresses from kernel mode itself.
+One set is essentially unchanged; it includes both kernel-space and user-space addresses, but it is only used when the system is running in kernel mode. The second “shadow” page table contains a copy of all of the user-space mappings, but leaves out the kernel side. Instead, there is a minimal set of kernel-space mappings that provides the information needed to handle system calls and interrupts, but no more. Copying the page tables may sound inefficient, but the copying only happens at the top level of the page-table hierarchy, so the bulk of that data is shared between the two copies.
+Whenever a process is running in user mode, the shadow page tables will be active. The bulk of the kernel’s address space will thus be completely hidden from the process, defeating the known hardware-based attacks. Whenever the system needs to switch to kernel mode, in response to a system call, an exception, or an interrupt, for example, a switch to the other page tables will be made.</p>
+
+<p>The code that manages the return to user space must then make the shadow page tables active again.
+Keeping the kernel permanently mapped eliminates the need to flush the processor’s translation lookaside buffer (TLB) when switching between user and kernel space, and it allows the TLB entries for kernel space to never be flushed. Flushing the TLB is an expensive operation for a couple of reasons: having to go to the page tables to repopulate the TLB hurts, but the act of performing the flush itself is slow enough that it can be the biggest part of the cost.</p>
+
+<p>This means that, with every single syscall, the CPU will need to switch virtual memory contexts, flushing that TLB and taking a relatively long about of time. Access to memory pages which aren’t cached in the TLB takes roughly 200 CPU cycles or so, access to a cached entry usually takes less than a single cycle.</p>
+
+<p>KAISER seems to benefit from modern CPUs which offer some help, though, in the form of process-context identifiers (PCIDs). From what I gleaned from the paper, by having efficient TLB management due to an optimized implementation which tags the TLB entries with the CR3 register to avoid frequent TLB flushes due to switches between processes or between user mode and kernel mode ; lookups in the TLB will only succeed if the associated PCID matches that of the thread running in the processor at the time. Use of PCIDs eliminates the need to flush the TLB at context switches; that reduces the cost of switching page tables during system calls considerably. So some overhead is reduced there.</p>
+
+<p>KAISER also makes specific reference in its abstract to removing all knowledge of kernel address space from the memory management hardware while user code is active on the CPU, it seems to need mapping of all randomised memory locations that are used during context switch at fixed offsets and new mappings be provided and that the kernel locations are only accessed through the fixed mappings. Not sure how efficient and safe that is.</p>
+
+<p>KAISER will affect performance for anything that does system calls or interrupts: everything. Just the new instructions (CR3 manipulation) add a few hundred cycles to a syscall or interrupt. Most workloads that we have run show single-digit regressions. 5% is a good round number for what is typical. The worst we have seen is a roughly 30% regression on a loopback networking test that did a ton of syscalls and context switches.</p>
+
+<p>Intel is mainly to blame for BTBs, as it uses lower 31 bits for storing branch target in cache. And since KASLRs build on entropy in the lower 31 bits and these are shared between user and kernel mode we’ve the same issue again so KAISER can’t help here.</p>
+
+<p>Also it’s not quite clear on how KAISER manages systematic brute forcing on copies of the program with the same address space like in ALSR.</p>
+
+<p>But for now, implementing KAISER-like methods with better features via patches seems the best way to go.
+Timely updates from mainstream operating system vendors to devices is sure to be issued soon after evaluation of the issues.
+Lot more is set to follow from here on as it has kicked up a gale of speculation.
+More information about the issue is available here.</p>
+
+  </div>
+
+</article>
+
+
+  
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://abvr.github.io/2018/01/01/cpu.html';
+      this.page.identifier = 'https://abvr.github.io/2018/01/01/cpu.html';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://abhinavrajagopalan-in.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Stream of Soliloquy</li>
+          <li><a href="mailto:abhinavrajagopalan@gmail.com">abhinavrajagopalan@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/abvr"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">abvr</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is my blog and personal web page where I write mostly about computing, science, philosophy and whatever else I feel like. 
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

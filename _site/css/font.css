@@ -1,0 +1,26 @@
+<style>
+  @font-face {
+    font-family: "Adobe Caslon Pro";
+    src: url('https://github.com/ASHMCDevelopers/main/blob/master/static/fonts/Adobe%20Caslon%20Pro.ttf');
+  }
+  @font-face {
+    font-family: "Adobe Caslon Pro";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-Bold.otf');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: "Adobe Caslon Pro";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-Italic.otf');
+    font-style: italic, oblique;
+  }
+  @font-face {
+    font-family: "Adobe Caslon Pro";
+    src: url('https://github.com/bstaats/livestaats/blob/master/design/Adobe%20Caslon%20Pro/Adobe%20Caslon%20Pro%20Font%20Files/ACaslonPro-BoldItalic.otf');
+    font-weight: bold;
+    font-style: italic, oblique;
+  }
+
+  body {
+    font-family: "Adobe Caslon Pro", serif;
+  }
+</style>
