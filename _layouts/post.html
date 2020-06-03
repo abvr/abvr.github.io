@@ -1,6 +1,5 @@
 ---
 layout: default
-comments: true
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -15,3 +14,7 @@ comments: true
   </div>
 
 </article>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
