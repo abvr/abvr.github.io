@@ -35,12 +35,8 @@ layout: default
 <br>
 <br>
 <br>
-<script src="https://utteranc.es/client.js"
-        repo="abvr/abvr.github.io"
-        issue-term="pathname"
-        label="Comments"
-        theme="boxy-light"
-        crossorigin="anonymous"
-        async>
-</script>
+
+{% if site.disqus.shortname %}
+  {% include disqus_comments.html %}
+{% endif %}
 
