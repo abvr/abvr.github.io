@@ -292,6 +292,7 @@ pre {
 
 .post-title {
   font-size: 42px;
+  font-family: "NY Irvin", NY Irvin, serif;
   letter-spacing: -1px;
   line-height: 1;
   color: #b6bae6; }
@@ -301,6 +302,8 @@ pre {
 
 .post-content {
   margin-bottom: 30px; }
+  .post-content body {
+    font-family: "Adobe Caslon Pro", Adobe Caslon Pro, sans-serif; }
   .post-content h2 {
     font-size: 32px; }
     @media screen and (max-width: 900px) {
