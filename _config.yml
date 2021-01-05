@@ -15,6 +15,19 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abvr.github.io" # the base hostname & protocol for your site
 
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - code
+  - vendor
+plugins:
+  - jekyll-redirect-from
+  
 social_links:
 
 linkedin_username: abvr
