@@ -31,6 +31,9 @@ exclude:
 plugins:
   - jekyll-redirect-from
   
+sass:
+  sass_dir: _sass
+  
 social_links:
 
 linkedin_username: abvr
