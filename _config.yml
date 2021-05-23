@@ -11,7 +11,7 @@ exclude: [vendor, "Gemfile", "Gemfile.lock"]
 title: Stream of Soliloquy 
 email: abhinavrajagopalan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    This is my blog and personal web page where I mostly like to write about computing, science, philosophy and whatever else I feel like but mostly end up ranting. 
+    This is my blog and personal web page where I like to write about computing, science, philosophy and whatever else I feel like but mostly end up ranting. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abvr.github.io" # the base hostname & protocol for your site
 
