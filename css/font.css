@@ -1,7 +1,7 @@
 <style>
   @font-face {
     font-family: "Adobe Caslon Pro";
-    src: url('https://github.com/ASHMCDevelopers/main/blob/master/static/fonts/Adobe%20Caslon%20Pro.ttf');
+    src: url("../assets/fonts/ACaslonPro/");
   }
   @font-face {
     font-family: "Adobe Caslon Pro";
@@ -21,6 +21,8 @@
   }
 
   body {
-    font-family: "Adobe Caslon Pro", serif;
+    font-family: "Adobe Caslon Pro", sans-serif;
+    font-family: "NY-Irvin", serif
+      src: url("../assets/fonts/NY-Irvin.tff");
   }
 </style>
