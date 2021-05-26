@@ -1,7 +1,7 @@
 <style>
   @font-face {
-    font-family: "Adobe Caslon Pro";
-    src: url("../assets/fonts/ACaslonPro/");
+    font-family: "Adobe Caslon Pro", sans-serif;
+    src: url("../assets/fonts/ACaslonPro");
   }
   @font-face {
     font-family: "Adobe Caslon Pro";
