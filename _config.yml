@@ -46,4 +46,3 @@ google_analytics: UA-168275953-1
 # Build settings
 markdown: kramdown
 highlighter: rouge
-font: Adobe Caslon Pro
