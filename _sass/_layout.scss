@@ -12,17 +12,17 @@
 
 @font-face {
   font-family: "NY-Irvin", serif;
-  src: url("../assets/fonts/NY-Irvin.tff");
+  src: url("../assets/fonts/NY-Irvin.tff") format(‘truetype’);
 }
 
 @font-face {
   font-family: "NY-Irvin";
-  src: url("../assets/fonts/NY-Irvin.tff");
+  src: url("../assets/fonts/NY-Irvin.tff") format(‘truetype’);
 }
 
 @font-face {
   font-family: "Adobe Caslon Pro", sans-serif;
-  src: url("../assets/fonts/ACaslonPro");
+  src: url("../assets/fonts/ACaslonPro/ACaslonPro-Regular.otf") format(‘opentype’);
 }
 
 .site-title {
