@@ -1,7 +1,7 @@
 <style>
   @font-face {
     font-family: "Adobe Caslon Pro", sans-serif;
-    src: url("../assets/fonts/ACaslonPro");
+    src: url(".../ACaslonPro-Regular.otf");
   }
   @font-face {
     font-family: "Adobe Caslon Pro";
@@ -23,6 +23,6 @@
   body {
     font-family: "Adobe Caslon Pro", sans-serif;
     font-family: "NY-Irvin", serif
-      src: url("../assets/fonts/NY-Irvin.tff");
+      src: url(".../NY-Irvin.tff");
   }
 </style>
