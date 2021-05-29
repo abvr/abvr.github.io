@@ -15,6 +15,9 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://abvr.github.io" # the base hostname & protocol for your site
 
+pages:
+  markdown:
+    extra: true
 assets:
    sources:
        - assets/fonts
