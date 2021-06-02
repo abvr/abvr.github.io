@@ -20,6 +20,11 @@
     font-style: italic, oblique;
   }
 
+@font-face {
+    font-family: "Latin Modern Roman", sans-serif;
+    src: url(".../lmroman10-regular.otf");
+  }
+
   body {
     font-family: "Adobe Caslon Pro", sans-serif;
     font-family: "NY-Irvin", serif
