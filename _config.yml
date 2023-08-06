@@ -8,7 +8,7 @@
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
 # Site settings
-title: Stream of Soliloquy 
+title: Stream of soliloquy 
 email: abhinavrajagopalan@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     This is my personal web page where I like to mulldump on computing, science, philosophy and whatever else I feel like but mostly end up rubberducking myself. 
